@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "flatbuffers",
+    srcs = ["flatbuffers.go"],
+    importpath = "github.com/zachary-kuhn/gazelle-flatbuffers/language/flatbuffers",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/language/flatbuffers",
+        "@bazel_gazelle//language:go_default_library",
+    ],
+)
